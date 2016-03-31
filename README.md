@@ -10,13 +10,16 @@ php -S localhost:3000
 ```
 
 ## Feature list
-[x] Sign in/out with Google OAuth2
-[x] List emails (ordered) from Inbox folder
-[x] Display personal data
-[x] Load emails on click
-[x] Routing authentication redirects
-[ ] Search emails
-[ ] Category views
-[ ] Infinite scroll (no need for clicks)
+- [x] Sign in/out with Google OAuth2
+- [x] List emails (ordered) from Inbox folder
+- [x] Display personal data
+- [x] Load emails on click
+- [x] Routing authentication redirects
+- [ ] Search emails
+- [ ] Category views
+- [ ] Infinite scroll (no need for clicks)
+
+---------------------------------------------------------
+By Bao Nguyen, March 2016.
 
 
