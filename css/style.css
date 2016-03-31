@@ -1,0 +1,262 @@
+/* 
+  Allow angular.js to be loaded in body, hiding cloaked elements until 
+  templates compile.  The !important is important given that there may be 
+  other selectors that are more specific or come later and might alter display.  
+ */
+* {
+  /* So 100% means 100% */
+  box-sizing: border-box;
+}
+
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none !important;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+    float: left;
+    padding: 5px;
+}
+
+.row:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+body {
+  background-color: #F2F2F2;
+  font-family: Roboto,"Helvetica Neue",sans-serif;
+}
+
+.container {
+  width: 100%;
+  position: absolute;
+  background-color: #01579B;
+  height: 100%;
+  border-left: 40px solid #FF5722;
+}
+
+.brand-text {
+  font-size: 5em;
+  color: rgba(255,255,255,0.9);
+}
+
+#brand-login {
+  position: absolute;
+  top: calc(50% - 85px);
+  left: 25%;
+}
+
+
+#google-login {
+  position: absolute;
+  top: calc(50% + 20px);
+  left: calc(25% - 65px);
+}
+
+#header {
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  background-color: #01579B;
+  color: rgba(255,255,255,0.9);
+  box-shadow: 0 -1px 0 #e5e5e5,0 0 6px rgba(0,0,0,.12),0 6px 12px rgba(0,0,0,.24);
+}
+
+#content{
+  width: 100%;
+  background-color: #F2F2F2;
+  padding-top: 65px;
+}
+
+.brand-home {
+  position: absolute;
+  font-size: 28px;
+  left: 32px;
+  top: 16px;
+  color: #FFF;
+}
+
+#email {
+  float: left;
+  padding-right: 15px;
+  margin-top: 12px;
+  color: #FFF;
+  font-size: 15px;
+}
+
+#right-panel {
+  position: absolute;
+  right: 2%;
+  top: 0px;
+  height: 65px;
+}
+
+#profile {
+  float: right;
+  margin-top: 9px;
+}
+
+#profile img {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+}
+
+#sign-out {
+  position: absolute;
+  bottom: 15px;
+  font-size: 13px;
+  cursor: pointer;
+  right: 60px;
+}
+
+#sign-out:hover {
+  color: rgba(255,255,255,0.7);
+}
+
+.item-content{
+  width: 65%;
+  margin: 0 auto;
+  padding: 12px;
+  background-color: rgba(255,255,255,0.83);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  font-size: 12px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.item-content:hover{
+  cursor: pointer;
+  background-color: rgba(255,255,255,0.54);
+  border-left: 3px solid #FF5722;
+}
+
+.item-from {
+  color: rgba(0,0,0,0.83);
+  font-weight: 500;
+}
+
+.item-subject {
+  color: rgba(0,0,0,0.83);
+  font-size: 14px;
+  margin-top: -2px;
+}
+
+.item-date {
+  color: rgba(0,0,0,0.54);
+
+}
+
+.hide-overflow-text {
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+
+.loading {
+  color: rgba(0,0,0,0.54);
+  font-size: 20px;
+  top: 150px;
+  left: calc(50% - 40px);
+  position: absolute;
+}
+
+.label {
+  margin-top: 40px;
+  font-size: 24px;
+  text-align: center;
+  color: rgba(0,0,0,0.83);
+}
+
+.message-list-container {
+  padding-top: 15px;
+  padding-bottom: 40px;
+}
+
+.content-card {
+  line-height: 19px;
+  font-size: 12px;
+  width: 70%;
+  padding: 50px;
+  margin: 0px auto 45px auto;
+  background-color: #FFF;
+  box-shadow: 0 -1px 0 #e5e5e5,0 0 6px rgba(0,0,0,.12),0 6px 12px rgba(0,0,0,.24);
+}
+
+.content-card-head {
+  font-size: 15px;
+  background-color: rgba(255,255,255,0.38);
+  height: 80px;
+  width: 70%;
+  margin: 10px auto 0px auto;
+  padding: 20px 45px 20px 45px;
+  box-shadow: 0 -1px 0 #e5e5e5,0 0 6px rgba(0,0,0,.12),0 6px 12px rgba(0,0,0,.24);
+  cursor: pointer;
+  border-left: 2px solid #ff5722;
+}
+
+.content-card-head:hover{
+  background-color: #FFF;
+  -webkit-transition: background-color 0.6s;
+  transition: background-color 0.6s;
+}
+
+.content-card-head > .item-from {
+  font-weight: normal;
+  font-size: 12px;
+  color: rgba(0,0,0,0.54);
+}
+
+.content-card-head > .item-subject {
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+#load-more {
+  margin-bottom: 40px;
+  text-align: center;
+  color: rgba(0,0,0,0.54);
+}
+
+#load-more span:hover {
+  color: #FF5722;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 480px) {
+  .item-content{
+    width: 100%;
+  }
+  #email {
+    font-size: 12px;
+  }
+  .content-card-head {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .content-card-head > .item-from,
+  .content-card-head > .item-subject {
+    margin-top: 8px;
+    font-size: 13px;
+  }
+  .content-card {
+    width: 100%;
+    padding: 20px;
+  }
+}

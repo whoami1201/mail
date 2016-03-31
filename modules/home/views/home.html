@@ -1,0 +1,20 @@
+<div class="wrapper">
+  <div id="header">
+    <div class="brand-home">Mail</div>
+    <div id="right-panel">
+      <div id="email">{{email}}</div>
+      <div id="profile"><img ng-src="{{profileSrc}}"></div>
+      <div id="sign-out" ng-click="signOut()">Sign Out</div>
+    </div>
+  </div>
+  <div id="content">
+    <div class="label">Inbox</div>
+    <div class="loading">{{loadingStatus}}</div>
+    <div class="message-list-container">
+      <div ng-repeat="message in messageList">
+        <message-list-item></message-list-item>
+      </div>
+    </div>
+    <div id="load-more" ng-click="loadMore()"><span>{{loadMoreStatus}}</span></div>
+  </div>
+</div>
